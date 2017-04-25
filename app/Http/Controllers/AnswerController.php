@@ -53,9 +53,9 @@ class AnswerController extends Controller
                 'data' => $answer
             ], 200);
         } catch (\Exception $e) {
-            return response()->json([[
+            return response()->json([
                 'message' => 'Resposta não encontrada'
-            ]);
+            ], 500);
         }
     }
 

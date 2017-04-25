@@ -67,9 +67,9 @@ class QuestionController extends Controller
                 'data' => ['pergunta' => $question, 'respostas' => $answers]
             ], 200);
         } catch (\Exception $e) {
-            return response()->json([[
+            return response()->json([
                 'message' => 'Pergunta não encontrada'
-            ]);
+            ], 500);
         }
     }
 
